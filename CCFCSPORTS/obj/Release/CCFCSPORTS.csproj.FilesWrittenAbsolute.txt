@@ -1,0 +1,14 @@
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.App.xaml
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.CCFCSPORTSPage.xaml
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.CCFCSPORTSHomePage.xaml
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.CCFCSPORTSCategoryPage.xaml
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.App.xaml.g.cs
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.CCFCSPORTSPage.xaml.g.cs
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.CCFCSPORTSHomePage.xaml.g.cs
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.CCFCSPORTSCategoryPage.xaml.g.cs
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/bin/Release/CCFCSPORTS.dll
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/obj/Release/CCFCSPORTS.dll
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/bin/Release/Xamarin.Forms.Core.dll
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/bin/Release/Xamarin.Forms.Platform.dll
+/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/bin/Release/Xamarin.Forms.Xaml.dll
