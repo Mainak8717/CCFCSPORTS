@@ -2,6 +2,75 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="CCFCSPORTS.CCFCSPORTSDomesticTournamentsPage">
-	<Label Text = "DOMESTIC"></Label>
+	<StackLayout Padding = "10">
+		<StackLayout Orientation = "Horizontal">
+		<Button x:Name= "ATeam" 
+				Text = "A Team"
+				TextColor = "White"
+		 		BackgroundColor = "Gray" 
+				BorderRadius = "7" 
+			    HeightRequest = "40" 
+			    HorizontalOptions = "FillAndExpand"/>
+		<Button x:Name= "BTeam" 
+				Text = "B Team"
+				TextColor = "White"
+		 		BackgroundColor ="Gray" 
+				BorderRadius = "7" 
+			    HeightRequest = "40" 
+			    HorizontalOptions = "FillAndExpand"/>
+		<Button x:Name = "CTeam" 
+				Text = "C Team"
+				TextColor = "White"
+		 		BackgroundColor = "Gray" 
+				BorderRadius = "7" 
+			    HeightRequest ="40" 
+			    HorizontalOptions = "FillAndExpand"/>
+		
+		</StackLayout>
+
+		<ListView  x:Name="lstView" RowHeight="60">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor = "Red">
+							<Label Text = "FT" BackgroundColor = "Gray" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" WidthRequest = "60" HeightRequest = "50"/>
+							<StackLayout WidthRequest = "30" BackgroundColor = "Silver" HeightRequest = "50">
+                        		<Label Text="{Binding TeamOneScore}"></Label>
+                            	<Label Text="{Binding TeamTwoScore}"></Label>
+							</StackLayout>
+							<StackLayout Orientation="Vertical" HorizontalOptions = "Center">
+								<Label Text = "{Binding TeamOne}" />
+								<Label Text = "{Binding TeamTwo}"/>
+							</StackLayout>
+<!--							<Image Source="{Binding Image}" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>-->
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+
+		
+		<!--<TableView>
+        <TableView.Root>
+            <TableSection Title="1st April Sunday, 2017">     
+                <ViewCell>
+                    <ViewCell.View>
+                        <StackLayout Orientation="Horizontal" >
+                        <Label Text = "FT" BackgroundColor = "Gray" VerticalOptions = "Center" WidthRequest = "60"/>
+                        <StackLayout WidthRequest = "30" BackgroundColor = "Silver">
+                        	<Label Text="0"></Label>
+                            <Label Text="1"></Label>
+						</StackLayout>
+						<StackLayout>
+                            <Label Text="Brazil"></Label>
+                            <Label Text="Argentina"></Label>
+                        </StackLayout>
+                        </StackLayout>      
+                    </ViewCell.View>
+                </ViewCell>
+            </TableSection>
+        </TableView.Root>
+    </TableView>-->
+	</StackLayout>
 
 </ContentPage>

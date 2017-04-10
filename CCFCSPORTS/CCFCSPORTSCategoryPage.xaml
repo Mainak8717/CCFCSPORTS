@@ -7,7 +7,7 @@
 	<StackLayout Padding = "10">
 			
  		<Button x:Name = "TOURNAMENT" 
-		 		Text = "TOURNAMENTS" 
+		 		Text = "TOURNAMENTS/GAMES" 
 		 		TextColor = "White"
 		 		BackgroundColor ="Gray" 
 				BorderRadius = "7" 
