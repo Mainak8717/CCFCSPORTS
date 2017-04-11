@@ -11,7 +11,7 @@
 namespace CCFCSPORTS {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/ctsmobility/Projects/Mainak8717/CCFCSPORTS.git/CCFCSPORTS/CCFCSPORTSDomesticTournamentsPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/Mainak/Projects/CCFCSPORTS/CCFCSPORTS/CCFCSPORTSDomesticTournamentsPage.xaml")]
     public partial class CCFCSPORTSDomesticTournamentsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
