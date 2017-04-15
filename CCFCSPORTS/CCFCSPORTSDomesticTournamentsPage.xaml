@@ -4,28 +4,36 @@
 	x:Class="CCFCSPORTS.CCFCSPORTSDomesticTournamentsPage">
 	<StackLayout Padding = "10">
 		<StackLayout Orientation = "Horizontal">
-		<Button x:Name= "ATeam" 
-				Text = "A Team"
-				TextColor = "White"
-		 		BackgroundColor = "Gray" 
-				BorderRadius = "7" 
-			    HeightRequest = "40" 
-			    HorizontalOptions = "FillAndExpand"/>
-		<Button x:Name= "BTeam" 
-				Text = "B Team"
-				TextColor = "White"
-		 		BackgroundColor ="Gray" 
-				BorderRadius = "7" 
-			    HeightRequest = "40" 
-			    HorizontalOptions = "FillAndExpand"/>
-		<Button x:Name = "CTeam" 
-				Text = "C Team"
-				TextColor = "White"
-		 		BackgroundColor = "Gray" 
-				BorderRadius = "7" 
-			    HeightRequest ="40" 
-			    HorizontalOptions = "FillAndExpand"/>
-		
+			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
+				<Button x:Name= "ATeam" 
+					Text = "A Team"
+					TextColor = "Black"
+		 			BackgroundColor = "White" 
+					BorderRadius = "7" 
+			    	HeightRequest = "40" 
+			    	HorizontalOptions = "FillAndExpand"/>
+				<BoxView Color= "Black" HeightRequest ="2"></BoxView>
+			</StackLayout>
+			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
+				<Button x:Name= "BTeam" 
+					Text = "B Team"
+					TextColor = "Black"
+		 			BackgroundColor ="White" 
+					BorderRadius = "7" 
+			   		HeightRequest = "40" 
+			   	    HorizontalOptions = "FillAndExpand"/>
+				<BoxView Color= "Black" HeightRequest ="2"></BoxView>
+			</StackLayout>
+			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
+				<Button x:Name = "CTeam" 
+					Text = "C Team"
+					TextColor = "Black"
+		 			BackgroundColor = "White" 
+					BorderRadius = "7" 
+			   		HeightRequest ="40" 
+			    	HorizontalOptions = "FillAndExpand"/>
+				<BoxView Color= "Black" HeightRequest ="2"></BoxView>
+			</StackLayout>
 		</StackLayout>
 
 		<ListView  x:Name="lstView" RowHeight="80" SeparatorVisibility = "None">
@@ -43,13 +51,13 @@
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell Height = "80">
-						<StackLayout HorizontalOptions ="FillAndExpand" BackgroundColor = "White">
-							<Label Text = "{Binding gameTime}"  HeightRequest = "30" TextColor = "Red" BackgroundColor = "Gray" HorizontalOptions =  "FillAndExpand" HorizontalTextAlignment = "Center"></Label>			
-							<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor = "White" >
+						<StackLayout Padding = "2" HorizontalOptions ="FillAndExpand" BackgroundColor = "Blue">
+							<Label Margin="1,1,1,1" Text = "{Binding gameTime, StringFormat='{}{0:dd/MM/yyyy}'}"  HeightRequest = "30" TextColor = "White" BackgroundColor = "Black" HorizontalOptions =  "FillAndExpand" HorizontalTextAlignment = "Center"></Label>			
+							<StackLayout Padding ="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor = "White" >
 								<Label Text = "FT" BackgroundColor = "White" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" WidthRequest = "80" VerticalOptions = "CenterAndExpand" HeightRequest = "80"/>
 								<StackLayout BackgroundColor = "White" VerticalOptions = "CenterAndExpand">
-                        			<Label Text="{Binding TeamOneScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand" ></Label>
-                            		<Label Text="{Binding TeamTwoScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand" ></Label>
+                        			<Label Text="{Binding TeamOneScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
+                            		<Label Text="{Binding TeamTwoScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
 								</StackLayout>
 								<StackLayout Orientation="Vertical" HorizontalOptions = "Center" VerticalOptions = "CenterAndExpand">
 									<Label Text = "{Binding TeamOne}" VerticalTextAlignment = "Center" VerticalOptions = "CenterAndExpand"/>
@@ -63,7 +71,6 @@
 			</ListView.ItemTemplate>
 		</ListView>
 
-		
 		<!--<TableView>
         <TableView.Root>
             <TableSection Title="1st April Sunday, 2017">     
