@@ -9,22 +9,24 @@
 // ------------------------------------------------------------------------------
 
 namespace CCFCSPORTS {
+    using System;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/ctsmobility/Projects/Mainak8717/CCFCSPORTS.git/CCFCSPORTS/CCFCSPORTSHomePage.xaml")]
     public partial class CCFCSPORTSHomePage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button CRICKET;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button FOOTBALL;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CCFCSPORTSHomePage));
-            CRICKET = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "CRICKET");
-            FOOTBALL = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "FOOTBALL");
+            this.LoadFromXaml(typeof(CCFCSPORTSHomePage));
+            CRICKET = this.FindByName <global::Xamarin.Forms.Button>("CRICKET");
+            FOOTBALL = this.FindByName <global::Xamarin.Forms.Button>("FOOTBALL");
         }
     }
 }

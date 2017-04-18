@@ -17,3 +17,4 @@
 /Users/Mainak/Projects/CCFCSPORTS/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
 /Users/Mainak/Projects/CCFCSPORTS/iOS/bin/iPhoneSimulator/Debug/CCFCSPORTS.dll
 /Users/Mainak/Projects/CCFCSPORTS/iOS/bin/iPhoneSimulator/Debug/CCFCSPORTS.dll.mdb
+/Users/Mainak/Projects/CCFCSPORTS/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll

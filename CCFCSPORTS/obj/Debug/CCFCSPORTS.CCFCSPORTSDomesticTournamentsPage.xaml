@@ -4,31 +4,42 @@
 	x:Class="CCFCSPORTS.CCFCSPORTSDomesticTournamentsPage">
 	<StackLayout Padding = "10">
 		<StackLayout Orientation = "Horizontal">
-		<Button x:Name= "ATeam" 
-				Text = "A Team"
-				TextColor = "White"
-		 		BackgroundColor = "Gray" 
-				BorderRadius = "7" 
-			    HeightRequest = "40" 
-			    HorizontalOptions = "FillAndExpand"/>
-		<Button x:Name= "BTeam" 
-				Text = "B Team"
-				TextColor = "White"
-		 		BackgroundColor ="Gray" 
-				BorderRadius = "7" 
-			    HeightRequest = "40" 
-			    HorizontalOptions = "FillAndExpand"/>
-		<Button x:Name = "CTeam" 
-				Text = "C Team"
-				TextColor = "White"
-		 		BackgroundColor = "Gray" 
-				BorderRadius = "7" 
-			    HeightRequest ="40" 
-			    HorizontalOptions = "FillAndExpand"/>
-		
+			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
+				<Button x:Name= "ATeam" 
+					Text = "A Team"
+					TextColor = "Black"
+		 			BackgroundColor = "White" 
+					BorderRadius = "7" 
+			    	HeightRequest = "40" 
+			    	HorizontalOptions = "FillAndExpand"
+					Clicked = "A_ButtonClicked"/>
+				<BoxView x:Name ="A_Line" Color= "Black" HeightRequest ="2"></BoxView>
+			</StackLayout>
+			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
+				<Button x:Name= "BTeam" 
+					Text = "B Team"
+					TextColor = "Black"
+		 			BackgroundColor ="White" 
+					BorderRadius = "7" 
+			   		HeightRequest = "40" 
+			   	    HorizontalOptions = "FillAndExpand"
+					Clicked = "B_ButtonClicked"/>
+				<BoxView x:Name ="B_Line" Color= "Black" HeightRequest ="2"></BoxView>
+			</StackLayout>
+			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
+				<Button x:Name = "CTeam" 
+					Text = "C Team"
+					TextColor = "Black"
+		 			BackgroundColor = "White" 
+					BorderRadius = "7" 
+			   		HeightRequest ="40" 
+			    	HorizontalOptions = "FillAndExpand"
+					Clicked = "C_ButtonClicked"/>
+				<BoxView x:Name ="C_Line" Color= "Black" HeightRequest ="2"></BoxView>
+			</StackLayout>
 		</StackLayout>
 
-		<ListView  x:Name="lstView" RowHeight="80" SeparatorVisibility = "None">
+<!--		<ListView  x:Name="lstView" RowHeight="80" SeparatorVisibility = "None">-->
 <!--			    <ListView.GroupHeaderTemplate>
      				 <DataTemplate>
       				 <ViewCell Height="25">
@@ -40,32 +51,58 @@
        				 </ViewCell>
       				</DataTemplate>
 				</ListView.GroupHeaderTemplate>-->
-			<ListView.ItemTemplate>
+<!--			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell Height = "80">
-						    <Controls:RoundedFrame>
-						<StackLayout HorizontalOptions ="FillAndExpand" BackgroundColor = "White">
-							<Label Text = "{Binding gameTime}"  HeightRequest = "30" TextColor = "Red" BackgroundColor = "Gray" HorizontalOptions =  "FillAndExpand" HorizontalTextAlignment = "Center"></Label>			
-							<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor = "White" >
+						<StackLayout Padding = "2" HorizontalOptions ="FillAndExpand" BackgroundColor = "Blue">
+							<Label Margin="1,1,1,1" Text = "{Binding gameTime, StringFormat='{}{0:dd/MM/yyyy}'}"  HeightRequest = "30" TextColor = "White" BackgroundColor = "Black" HorizontalOptions =  "FillAndExpand" HorizontalTextAlignment = "Center"></Label>			
+							<StackLayout Padding ="1" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor = "White" >
 								<Label Text = "FT" BackgroundColor = "White" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" WidthRequest = "80" VerticalOptions = "CenterAndExpand" HeightRequest = "80"/>
 								<StackLayout BackgroundColor = "White" VerticalOptions = "CenterAndExpand">
-                        			<Label Text="{Binding TeamOneScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand" ></Label>
-                            		<Label Text="{Binding TeamTwoScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand" ></Label>
+                        			<Label Text="{Binding TeamOneScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
+                            		<Label Text="{Binding TeamTwoScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
 								</StackLayout>
 								<StackLayout Orientation="Vertical" HorizontalOptions = "Center" VerticalOptions = "CenterAndExpand">
 									<Label Text = "{Binding TeamOne}" VerticalTextAlignment = "Center" VerticalOptions = "CenterAndExpand"/>
 									<Label Text = "{Binding TeamTwo}" VerticalTextAlignment = "Center" VerticalOptions = "CenterAndExpand"/>
 								</StackLayout>
-<!--							<Image Source="{Binding Image}" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>-->
 							</StackLayout>
 						</StackLayout>
-							</Controls:RoundedFrame>
 					</ViewCell>
 				</DataTemplate>
 			</ListView.ItemTemplate>
-		</ListView>
+		</ListView>-->
+		<ListView  x:Name="lstView" RowHeight="60" IsGroupingEnabled="true" SeparatorVisibility = "None" GroupDisplayBinding="{Binding LongName}" HasUnevenRows = "true">
+			<ListView.GroupHeaderTemplate>
+            	<DataTemplate>
+              		<ViewCell Height="40">
+                		<StackLayout BackgroundColor="Gray" Padding="10">
+                  			<Label Text="{Binding LongName}" TextColor="Black" />
+                		</StackLayout>
+              		</ViewCell>
+           	 	</DataTemplate>
+         	</ListView.GroupHeaderTemplate>
+			<ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor = "White" Padding ="0.5">
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor = "Silver">	
+                            <Label Text = "FT" BackgroundColor = "Silver" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" WidthRequest = "60" HeightRequest = "50"/>
+                            <StackLayout WidthRequest = "30" BackgroundColor = "Gray" HeightRequest = "50">
+                                <Label Text="{Binding TeamOneScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
+                            	<Label Text="{Binding TeamTwoScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
+								</StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding TeamOne}" VerticalTextAlignment = "Center" VerticalOptions = "StartAndExpand"></Label>
+                            	<Label Text="{Binding TeamTwo}" VerticalTextAlignment = "Center" VerticalOptions = "EndAndExpand"></Label>
+								</StackLayout>
+                        </StackLayout>
+						</StackLayout>	
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> 
 
-		
 		<!--<TableView>
         <TableView.Root>
             <TableSection Title="1st April Sunday, 2017">     

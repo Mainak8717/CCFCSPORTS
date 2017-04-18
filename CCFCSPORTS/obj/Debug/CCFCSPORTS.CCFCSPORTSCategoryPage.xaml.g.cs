@@ -9,30 +9,32 @@
 // ------------------------------------------------------------------------------
 
 namespace CCFCSPORTS {
+    using System;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/ctsmobility/Projects/Mainak8717/CCFCSPORTS.git/CCFCSPORTS/CCFCSPORTSCategoryPage.xaml")]
     public partial class CCFCSPORTSCategoryPage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button TOURNAMENT;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button PHOTOGALLERY;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button SECTIONBEARERS;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button EXCAPTAINS;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CCFCSPORTSCategoryPage));
-            TOURNAMENT = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "TOURNAMENT");
-            PHOTOGALLERY = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "PHOTOGALLERY");
-            SECTIONBEARERS = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "SECTIONBEARERS");
-            EXCAPTAINS = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "EXCAPTAINS");
+            this.LoadFromXaml(typeof(CCFCSPORTSCategoryPage));
+            TOURNAMENT = this.FindByName <global::Xamarin.Forms.Button>("TOURNAMENT");
+            PHOTOGALLERY = this.FindByName <global::Xamarin.Forms.Button>("PHOTOGALLERY");
+            SECTIONBEARERS = this.FindByName <global::Xamarin.Forms.Button>("SECTIONBEARERS");
+            EXCAPTAINS = this.FindByName <global::Xamarin.Forms.Button>("EXCAPTAINS");
         }
     }
 }

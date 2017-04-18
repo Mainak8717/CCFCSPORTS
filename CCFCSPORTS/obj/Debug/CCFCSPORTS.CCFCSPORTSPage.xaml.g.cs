@@ -9,34 +9,36 @@
 // ------------------------------------------------------------------------------
 
 namespace CCFCSPORTS {
+    using System;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/ctsmobility/Projects/Mainak8717/CCFCSPORTS.git/CCFCSPORTS/CCFCSPORTSPage.xaml")]
     public partial class CCFCSPORTSPage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ScrollView Parent_scrollview;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry AdminUserId_TxtBox;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Entry AdminUserPwd_TxtBox;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button LoginButton;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button GuestLogin;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CCFCSPORTSPage));
-            Parent_scrollview = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.ScrollView>(this, "Parent_scrollview");
-            AdminUserId_TxtBox = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Entry>(this, "AdminUserId_TxtBox");
-            AdminUserPwd_TxtBox = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Entry>(this, "AdminUserPwd_TxtBox");
-            LoginButton = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "LoginButton");
-            GuestLogin = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "GuestLogin");
+            this.LoadFromXaml(typeof(CCFCSPORTSPage));
+            Parent_scrollview = this.FindByName <global::Xamarin.Forms.ScrollView>("Parent_scrollview");
+            AdminUserId_TxtBox = this.FindByName <global::Xamarin.Forms.Entry>("AdminUserId_TxtBox");
+            AdminUserPwd_TxtBox = this.FindByName <global::Xamarin.Forms.Entry>("AdminUserPwd_TxtBox");
+            LoginButton = this.FindByName <global::Xamarin.Forms.Button>("LoginButton");
+            GuestLogin = this.FindByName <global::Xamarin.Forms.Button>("GuestLogin");
         }
     }
 }

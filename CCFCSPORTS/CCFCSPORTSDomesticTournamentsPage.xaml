@@ -11,8 +11,9 @@
 		 			BackgroundColor = "White" 
 					BorderRadius = "7" 
 			    	HeightRequest = "40" 
-			    	HorizontalOptions = "FillAndExpand"/>
-				<BoxView Color= "Black" HeightRequest ="2"></BoxView>
+			    	HorizontalOptions = "FillAndExpand"
+					Clicked = "A_ButtonClicked"/>
+				<BoxView x:Name ="A_Line" Color= "Black" HeightRequest ="2"></BoxView>
 			</StackLayout>
 			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
 				<Button x:Name= "BTeam" 
@@ -21,8 +22,9 @@
 		 			BackgroundColor ="White" 
 					BorderRadius = "7" 
 			   		HeightRequest = "40" 
-			   	    HorizontalOptions = "FillAndExpand"/>
-				<BoxView Color= "Black" HeightRequest ="2"></BoxView>
+			   	    HorizontalOptions = "FillAndExpand"
+					Clicked = "B_ButtonClicked"/>
+				<BoxView x:Name ="B_Line" Color= "Black" HeightRequest ="2"></BoxView>
 			</StackLayout>
 			<StackLayout Orientation = "Vertical" HorizontalOptions = "FillAndExpand">
 				<Button x:Name = "CTeam" 
@@ -31,12 +33,13 @@
 		 			BackgroundColor = "White" 
 					BorderRadius = "7" 
 			   		HeightRequest ="40" 
-			    	HorizontalOptions = "FillAndExpand"/>
-				<BoxView Color= "Black" HeightRequest ="2"></BoxView>
+			    	HorizontalOptions = "FillAndExpand"
+					Clicked = "C_ButtonClicked"/>
+				<BoxView x:Name ="C_Line" Color= "Black" HeightRequest ="2"></BoxView>
 			</StackLayout>
 		</StackLayout>
 
-		<ListView  x:Name="lstView" RowHeight="80" SeparatorVisibility = "None">
+<!--		<ListView  x:Name="lstView" RowHeight="80" SeparatorVisibility = "None">-->
 <!--			    <ListView.GroupHeaderTemplate>
      				 <DataTemplate>
       				 <ViewCell Height="25">
@@ -48,7 +51,7 @@
        				 </ViewCell>
       				</DataTemplate>
 				</ListView.GroupHeaderTemplate>-->
-			<ListView.ItemTemplate>
+<!--			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell Height = "80">
 						<StackLayout Padding = "2" HorizontalOptions ="FillAndExpand" BackgroundColor = "Blue">
@@ -63,13 +66,42 @@
 									<Label Text = "{Binding TeamOne}" VerticalTextAlignment = "Center" VerticalOptions = "CenterAndExpand"/>
 									<Label Text = "{Binding TeamTwo}" VerticalTextAlignment = "Center" VerticalOptions = "CenterAndExpand"/>
 								</StackLayout>
-<!--							<Image Source="{Binding Image}" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>-->
 							</StackLayout>
 						</StackLayout>
 					</ViewCell>
 				</DataTemplate>
 			</ListView.ItemTemplate>
-		</ListView>
+		</ListView>-->
+		<ListView  x:Name="lstView" RowHeight="60" IsGroupingEnabled="true" SeparatorVisibility = "None" GroupDisplayBinding="{Binding LongName}" HasUnevenRows = "true">
+			<ListView.GroupHeaderTemplate>
+            	<DataTemplate>
+              		<ViewCell Height="40">
+                		<StackLayout BackgroundColor="Gray" Padding="10">
+                  			<Label Text="{Binding LongName}" TextColor="Black" />
+                		</StackLayout>
+              		</ViewCell>
+           	 	</DataTemplate>
+         	</ListView.GroupHeaderTemplate>
+			<ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor = "White" Padding ="0.5">
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor = "Silver">	
+                            <Label Text = "FT" BackgroundColor = "Silver" VerticalTextAlignment = "Center" HorizontalTextAlignment = "Center" WidthRequest = "60" HeightRequest = "50"/>
+                            <StackLayout WidthRequest = "30" BackgroundColor = "Gray" HeightRequest = "50">
+                                <Label Text="{Binding TeamOneScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
+                            	<Label Text="{Binding TeamTwoScore}" HorizontalTextAlignment = "Center" VerticalTextAlignment = "Center" VerticalOptions = "FillAndExpand"></Label>
+								</StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding TeamOne}" VerticalTextAlignment = "Center" VerticalOptions = "StartAndExpand"></Label>
+                            	<Label Text="{Binding TeamTwo}" VerticalTextAlignment = "Center" VerticalOptions = "EndAndExpand"></Label>
+								</StackLayout>
+                        </StackLayout>
+						</StackLayout>	
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> 
 
 		<!--<TableView>
         <TableView.Root>

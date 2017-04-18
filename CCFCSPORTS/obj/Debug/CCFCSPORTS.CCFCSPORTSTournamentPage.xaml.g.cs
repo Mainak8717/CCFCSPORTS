@@ -9,30 +9,32 @@
 // ------------------------------------------------------------------------------
 
 namespace CCFCSPORTS {
+    using System;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/ctsmobility/Projects/Mainak8717/CCFCSPORTS.git/CCFCSPORTS/CCFCSPORTSTournamentPage.xaml")]
     public partial class CCFCSPORTSTournamentPage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button WeekendGames;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button MerchantsCup;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button DomesticTournaments;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button InternationalTournaments;
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CCFCSPORTSTournamentPage));
-            WeekendGames = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "WeekendGames");
-            MerchantsCup = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "MerchantsCup");
-            DomesticTournaments = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "DomesticTournaments");
-            InternationalTournaments = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "InternationalTournaments");
+            this.LoadFromXaml(typeof(CCFCSPORTSTournamentPage));
+            WeekendGames = this.FindByName <global::Xamarin.Forms.Button>("WeekendGames");
+            MerchantsCup = this.FindByName <global::Xamarin.Forms.Button>("MerchantsCup");
+            DomesticTournaments = this.FindByName <global::Xamarin.Forms.Button>("DomesticTournaments");
+            InternationalTournaments = this.FindByName <global::Xamarin.Forms.Button>("InternationalTournaments");
         }
     }
 }

@@ -9,14 +9,16 @@
 // ------------------------------------------------------------------------------
 
 namespace CCFCSPORTS {
+    using System;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/ctsmobility/Projects/Mainak8717/CCFCSPORTS.git/CCFCSPORTS/CCFCSPORTSInternationalTournamentPage.xaml")]
     public partial class CCFCSPORTSInternationalTournamentPage : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CCFCSPORTSInternationalTournamentPage));
+            this.LoadFromXaml(typeof(CCFCSPORTSInternationalTournamentPage));
         }
     }
 }
